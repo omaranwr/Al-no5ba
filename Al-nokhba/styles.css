@@ -82,7 +82,7 @@ h1 {
     background-color: transparent;
     color: white;
 }
-.carousel ul {
+ul {
     list-style-type: none;
 }
 .carousel li {
@@ -141,9 +141,9 @@ h1 {
     padding: 50px;
     width: 80%;
     background-color: rgba(30, 30, 30, 20%);
-    min-height: 1000px;
 }
-.product-search {
+.product-search, .products {
+    margin-bottom: 20px;
     background-color: white;
     border: 20px solid rgb(30, 30, 30);
     padding: 25px;
@@ -159,6 +159,9 @@ h1 {
     border: 5px solid rgb(30, 30, 30);
     color: rgb(30, 30, 30);
     border-radius: 5px;
+}
+.products {
+    display: flex;
 }
 
 footer {
