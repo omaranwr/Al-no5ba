@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&display=swap');
+
+body {
+    background-color: white;
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: "Reem Kufi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(30, 30, 30);
+}
+
+.logo {
+    width: 50px;
+}
+.title {
+    background-color: white;
+}
+.title, .carousel, .carousel li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 100px;
+}
+.carousel {
+    background: #1941B0;
+    height: 500px;
+}
+.overlay {
+    position: absolute;
+    background-color: black;
+    opacity: 20%;
+    height: 520px;
+    margin: 0 -100px;
+    width: 100%;
+}
+.carousel > button {
+    font-size: 50px;
+    background: none;
+    border: solid white 5px;
+    border-radius: 10%;
+    color: white;
+    z-index: 50;
+}
+.carousel > button:hover {
+    background-color: white;
+    color: rgb(30, 30, 30);
+    border-color: transparent;
+}
+.carousel > button:active {
+    
+    background-color: transparent;
+    color: white;
+}
+.carousel ul {
+    list-style-type: none;
+}
+.carousel li {
+    position: absolute;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    opacity: 0%; 
+}
+.img-text {
+    position: relative;
+    width: 375px;
+    height: 400px;
+    background-color: rgba(30, 30, 30, 50%);
+    margin-right: 10px;
+    border-radius: 10%;
+    z-index: 50;  
+    color: white;
+    padding: 20px 10px;
+}
+.img-text p {
+    font-size: 2rem;
+}
+.img-text a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: rgb(30, 30, 30);
+    padding: 10px;
+    bottom: 50px;
+    right: 10px;
+    border-radius: 10%;
+}
+.carousel img {
+    max-width: 500px;
+    border-radius: 10%;
+    filter: drop-shadow(20px 20px 20px black);
+}
+* {
+    transition: all 0.3s;
+}
+.carousel li[data-active]{
+    opacity: 100%; 
+    z-index: 99;
+}
+.carousel:hover img {
+    filter: drop-shadow(20px 20px black);
+}
+.carousel:hover .overlay {
+    opacity: 50%;
+}
+.carousel-images { 
+    position: relative;
+}
+footer {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+    padding: 0.25rem;
+    margin-top: auto;
+    justify-self: end;
+}
+footer p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: 0.25rem;
+}
