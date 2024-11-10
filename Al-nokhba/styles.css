@@ -121,6 +121,9 @@ h1 {
 .carousel:hover .overlay {
     opacity: 50%;
 }
+.carousel:hover .img-text {
+    background-color: rgba(30, 30, 30, 80%);
+}
 .carousel-images { 
     position: relative;
 }

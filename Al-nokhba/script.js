@@ -2,6 +2,13 @@ let buttons = document.querySelectorAll("[data-carousel-button]");
 let carousel = document.querySelector(".carousel")
 let carouselImages = document.querySelector(".carousel-images");
 let carouselImagesChildren = carouselImages.children;
+let isInCarousel = false;
+carousel.addEventListener("mouseover", () => {
+    isInCarousel = true;
+})
+carousel.addEventListener("mouseout", () => {
+    isInCarousel = false;
+})
 function changeImage(change) {
     
     let activeSlide = carouselImages.querySelector("[data-active]");
@@ -24,3 +31,7 @@ buttons.forEach( (button) => {
         changeImage(change);
     })
 })
+
+let sliderInterval = window.setInterval( () => {
+    if (!isInCarousel) changeImage(1);
+}, 3000)
