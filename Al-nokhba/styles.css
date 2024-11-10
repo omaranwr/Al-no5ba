@@ -5,6 +5,20 @@
 
 * {
     transition: all 0.3s;
+    border-radius: 20px;
+}
+*:not(.carousel > button) {
+    
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+
+.no-radius {
+    border-radius: 0%;
 }
 
 body {
@@ -14,12 +28,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: "Cairo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
 }
 
 
@@ -58,9 +66,9 @@ h1 {
 }
 .carousel > button {
     font-size: 50px;
+    padding: 0 10px;
     background: none;
     border: solid white 5px;
-    border-radius: 10%;
     color: white;
     z-index: 50;
 }
@@ -90,7 +98,6 @@ h1 {
     height: 400px;
     background-color: rgba(30, 30, 30, 50%);
     margin-right: 10px;
-    border-radius: 10%;
     z-index: 50;  
     color: white;
     padding: 20px 10px;
@@ -107,12 +114,10 @@ h1 {
     padding: 10px;
     bottom: 50px;
     right: 10px;
-    border-radius: 10%;
 }
 .carousel img {
     max-width: 500px;
-    border-radius: 10%;
-    filter: drop-shadow(20px 20px 20px black);
+    filter: drop-shadow(10px 10px 10px black);
 }
 .carousel li[data-active]{
     opacity: 100%; 
@@ -133,25 +138,27 @@ h1 {
 
 .product-list {
     margin: 30px auto;
-    padding: 10px 50px;
+    padding: 50px;
     width: 80%;
-    background-color: rgba(30, 30, 30, 80%);
-    border-radius: 5%;
+    background-color: rgba(30, 30, 30, 20%);
+    min-height: 1000px;
 }
 .product-search {
     background-color: white;
-    border: 15px solid rgb(30, 30, 30);
-    /*border-radius: 15%;*/
+    border: 20px solid rgb(30, 30, 30);
     padding: 25px;
 }
-.product-list label[for="product-search"], .product-list #product-search {
+.product-list label[for="product-search"], #product-search {
     font-size: 2rem;
+    font-weight: 600;
     width: 100%;
 }
-#product-search {
+.product-list #product-search {
+    font-size: 1.5rem;
     background-color: white;
     border: 5px solid rgb(30, 30, 30);
     color: rgb(30, 30, 30);
+    border-radius: 5px;
 }
 
 footer {
