@@ -178,7 +178,7 @@ main {
 .products {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .products li {
@@ -189,6 +189,7 @@ main {
 .products img {
     width: 100%;
     border: 5px solid rgb(30, 30, 30);
+    position: relative;
 }
 
 footer {
