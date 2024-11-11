@@ -6,6 +6,7 @@
 * {
     transition: all 0.3s;
     border-radius: 20px;
+    box-sizing: border-box;
 }
 *:not(.carousel > button) {
     
@@ -22,11 +23,10 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(30, 30, 30);
     color: rgb(30, 30, 30);
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    position: relative;
     min-height: 100vh;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .logo {
-    width: 150px;
+    width: 10%;
 }
 .title {
     background-color: white;
@@ -61,27 +61,27 @@ h1 {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 10px 100px;
+    padding: 0.8em 8em;
 }
 .carousel {
     background: #1941B0;
-    height: 500px;
+    min-height: 35em;
 }
 .overlay {
     position: absolute;
     background-color: black;
     opacity: 20%;
-    height: 520px;
-    margin: 0 -100px;
+    min-height: 35em;
+    margin: 0 -8em;
     width: 100%;
 }
 .carousel > button {
-    font-size: 50px;
-    padding: 0 10px;
+    font-size: 2.5rem;
+    padding: 0 0.5em;
     background: none;
     border: solid white 5px;
     color: white;
-    z-index: 50;
+    z-index: 550;
 }
 .carousel > button:hover {
     background-color: white;
@@ -105,13 +105,13 @@ ul {
 }
 .img-text {
     position: relative;
-    width: 375px;
-    height: 400px;
+    min-width: 40ch;
+    min-height: 20em;
     background-color: rgba(30, 30, 30, 50%);
-    margin-right: 10px;
+    margin-right: 0.8rem;
     z-index: 50;  
     color: white;
-    padding: 20px 10px;
+    padding: 1em 0.8em 4.5em;
 }
 .img-text p {
     font-size: 1.8rem;
@@ -122,20 +122,20 @@ ul {
     text-decoration: none;
     border: 2px solid white;
     background-color: rgb(30, 30, 30);
-    padding: 10px;
-    bottom: 50px;
-    right: 10px;
+    padding: 0.8em;
+    bottom: 2.5em;
+    right: 0.8em;
 }
 .carousel img {
-    max-width: 500px;
-    filter: drop-shadow(10px 10px 10px black);
+    width: 30em;
+    filter: drop-shadow(1em 1em 1em black);
 }
 .carousel li[data-active]{
     opacity: 100%; 
     z-index: 99;
 }
 .carousel:hover img {
-    filter: drop-shadow(20px 20px black);
+    filter: drop-shadow(1.5em 1.5em black);
 }
 .carousel:hover .overlay {
     opacity: 50%;
@@ -147,17 +147,21 @@ ul {
     position: relative;
 }
 
+main {
+    background-color: rgb(30, 30, 30);
+    border-bottom: .5em solid white;
+}
 .product-list {
-    margin: 30px auto;
-    padding: 50px;
+    margin: 2em auto;
+    padding: 3em;
     width: 80%;
-    background-color: rgba(30, 30, 30, 20%);
+    background-color: white;
 }
 .product-search, .products {
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
     background-color: white;
-    border: 20px solid rgb(30, 30, 30);
-    padding: 25px;
+    border: .5em solid rgb(30, 30, 30);
+    padding: 2em;
 }
 .product-list label[for="product-search"], #product-search {
     font-size: 2rem;
@@ -173,12 +177,18 @@ ul {
 }
 .products {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
-.products img {
+.products li {
     display: inline;
-    width: 200px;
+    width: 20%;
+    padding: 1em;
+}
+.products img {
+    width: 100%;
+    border: 5px solid rgb(30, 30, 30);
 }
 
 footer {
@@ -187,7 +197,6 @@ footer {
     text-align: center;
     padding: 0.25rem;
     margin-top: auto;
-    justify-self: end;
 }
 footer p {
     font-size: 1.5rem;
