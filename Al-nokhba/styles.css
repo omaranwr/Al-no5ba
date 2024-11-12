@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: rgb(30, 30, 30);
+    background-color: white;
     color: rgb(30, 30, 30);
     margin: 0;
     position: relative;
@@ -105,7 +105,7 @@ ul {
 }
 .img-text {
     position: relative;
-    min-width: 40ch;
+    width: min(40ch, 20vw);
     min-height: 20em;
     background-color: rgba(30, 30, 30, 50%);
     margin-right: 0.8rem;
@@ -114,7 +114,7 @@ ul {
     padding: 1em 0.8em 4.5em;
 }
 .img-text p {
-    font-size: 1.8rem;
+    font-size: min(1.8rem, 2vw);
 }
 .img-text a {
     position: absolute;
@@ -127,7 +127,7 @@ ul {
     right: 0.8em;
 }
 .carousel img {
-    width: 30em;
+    width: min(30em, 30vw);
     filter: drop-shadow(1em 1em 1em black);
 }
 .carousel li[data-active]{
@@ -148,19 +148,18 @@ ul {
 }
 
 main {
-    background-color: rgb(30, 30, 30);
-    border-bottom: .5em solid white;
+    background-color: white;
+    border-bottom: .5em solid rgb(30, 30, 30);
 }
 .product-list {
-    margin: 2em auto;
+    margin: 3em auto;
     padding: 3em;
     width: 80%;
-    background-color: white;
 }
 .product-search, .products {
     margin-bottom: 1.5em;
     background-color: white;
-    border: .5em solid rgb(30, 30, 30);
+    border: 3px solid rgb(30, 30, 30);
     padding: 2em;
 }
 .product-list label[for="product-search"], #product-search {
@@ -181,15 +180,20 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     gap: 1em;
 }
+.products a {
+    width: 100%;
+    height: max-content;
+}
 .products li {
     display: inline;
     border: 3px solid rgb(30, 30, 30);
     padding: 1em;
+    background-color: rgba(30, 30, 30, 0%);
     flex-shrink: 1;
 }
 .products li:hover {
-    background-color: rgb(30, 30, 30);
-    color: white;
+    background-color: rgba(30, 30, 30, 20%);
+    color: black;
 }
 .products img {
     width: 100%;
@@ -201,6 +205,7 @@ main {
 }
 
 footer {
+    border-top: .5em solid white;
     background-color: rgb(30, 30, 30);
     color: white;
     text-align: center;
