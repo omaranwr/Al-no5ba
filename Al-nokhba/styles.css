@@ -12,7 +12,7 @@
     
     font-family: "Cairo", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     font-variation-settings:
       "slnt" 0;
@@ -170,26 +170,34 @@ main {
 }
 .product-list #product-search {
     font-size: 1.5rem;
+    padding: 0 1rem;
     background-color: white;
-    border: 5px solid rgb(30, 30, 30);
+    border: 3px solid rgb(30, 30, 30);
     color: rgb(30, 30, 30);
     border-radius: 5px;
 }
 .products {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 1em;
 }
 .products li {
     display: inline;
-    width: 20%;
+    border: 3px solid rgb(30, 30, 30);
     padding: 1em;
+    flex-shrink: 1;
+}
+.products li:hover {
+    background-color: rgb(30, 30, 30);
+    color: white;
 }
 .products img {
     width: 100%;
     border: 5px solid rgb(30, 30, 30);
     position: relative;
+}
+.products p {
+    font-size: 1.5rem;
 }
 
 footer {
