@@ -189,12 +189,14 @@ main {
     background-color: rgba(30, 30, 30, 0%);
 }
 .products li:hover {
-    background-color: rgba(30, 30, 30, 20%);
-    color: black;
+    background-color: rgba(30, 30, 30, 17%);
+}
+.products li:hover p {
+    font-weight: 650;
 }
 .products img {
     width: 100%;
-    border: 5px solid rgb(30, 30, 30);
+    border: 3px solid rgb(30, 30, 30);
     position: relative;
 }
 .products p {
