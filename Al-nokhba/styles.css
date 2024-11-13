@@ -181,15 +181,12 @@ main {
     gap: 1em;
 }
 .products a {
-    width: 100%;
-    height: max-content;
+    display: inline;
 }
 .products li {
-    display: inline;
     border: 3px solid rgb(30, 30, 30);
     padding: 1em;
     background-color: rgba(30, 30, 30, 0%);
-    flex-shrink: 1;
 }
 .products li:hover {
     background-color: rgba(30, 30, 30, 20%);

@@ -3,6 +3,12 @@ let carousel = document.querySelector(".carousel")
 let carouselImages = document.querySelector(".carousel-images");
 let carouselImagesChildren = carouselImages.children;
 let isInCarousel = false;
+
+var input, filter, ul, li, a, i, txtValue;
+input = document.getElementById('product-search');
+ul = document.getElementById("products");
+li = ul.getElementsByTagName('li');
+
 carousel.addEventListener("mouseover", () => {
     isInCarousel = true;
 })
@@ -35,3 +41,20 @@ buttons.forEach( (button) => {
 let sliderInterval = window.setInterval( () => {
     if (!isInCarousel) changeImage(1);
 }, 3000)
+
+
+function productSearch() {
+  
+    for (i = 0; i < li.length; i++) {  
+    filter = input.value.toUpperCase();
+      p = li[i].getElementsByTagName("p")[0];
+      console.log(p.textContent)
+      console.log(filter)
+      txtValue = p.textContent || p.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
