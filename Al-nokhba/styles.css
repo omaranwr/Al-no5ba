@@ -37,13 +37,16 @@ a {
 
 nav a div{
     display: inline;
-    font-size: 2rem;
+    font-size: 2vw;
     text-decoration: none;
     position: relative;
     bottom: 0.5rem;
 }
+nav a:first-child{
+    margin-left: 1em;
+}
 h1 {
-    font-size: 4rem;
+    font-size: 3vw;
     margin: 0;
     font-family: "Reem Kufi", sans-serif !important;
     font-optical-sizing: auto;
@@ -52,10 +55,11 @@ h1 {
 }
 
 .logo {
-    width: 10%;
+    width: 7vw;
 }
 .title {
     background-color: white;
+    font-size: 1vw;
 }
 .title, .carousel, .carousel li {
     align-items: center;
