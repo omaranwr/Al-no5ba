@@ -59,7 +59,7 @@ h1 {
 }
 
 .logo {
-    max-width: 14vw;
+    max-width: 7vw;
 }
 .title {
     background-color: white;
@@ -74,7 +74,7 @@ h1 {
 }
 .carousel {
     background: #1941B0;
-    min-height: 38em;
+    min-height: 44em;
     
     justify-content: space-around;
 }
@@ -82,7 +82,7 @@ h1 {
     position: absolute;
     background-color: black;
     opacity: 20%;
-    min-height: 38em;
+    min-height: 44em;
     width: 100%;
 }
 .carousel > button {
@@ -109,7 +109,8 @@ ul {
 .carousel li {
     position: absolute;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1em;
     bottom: 50%;
     transform: translate(-50%, 50%);
     left: 50%;
@@ -125,7 +126,7 @@ ul {
     padding: 1em 0.8em ;
 }
 .img-text p, .img-text a {
-    font-size: min(1rem, 5vw);
+    font-size: min(1.5rem, 5vw);
 }
 .img-text a {
     color: white;
@@ -184,7 +185,7 @@ main {
 }
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
     gap: 1em;
 }
 .products a {
@@ -192,12 +193,13 @@ main {
 }
 .products li {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: nowrap;
     border: 3px solid rgb(30, 30, 30);
     padding: .5em;
     background-color: rgba(30, 30, 30, 0%);
     display: flex;
+    position: relative;
 }
 .products li:hover {
     background-color: rgba(30, 30, 30, 17%);
@@ -206,13 +208,24 @@ main {
     font-weight: 650;
 }
 .products img {
-    width: 40%;
+    width: 50%;
     border: 3px solid rgb(30, 30, 30);
     position: relative;
 }
 .products p {
     margin: 0 .2em 0 0;
-    font-size: 1.5rem;
+    font-size: 5vw;
+}
+.products a {
+    display: block;
+    border: 3px solid rgb(30, 30, 30);
+    position: absolute;
+    bottom: .2em;
+    padding: .2em;
+}
+.products li:hover a {
+    background-color: rgb(30, 30, 30);
+    color: white;
 }
 
 footer {
@@ -229,7 +242,32 @@ footer p {
     margin: 0.25rem;
 }
 
-@media(max-width:768px) {
+@media(min-width:725px) {
+    .products {    
+        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    }
+    .products li {
+        flex-direction: column;
+    }
+    .products p {
+        font-size: 1.6rem;
+        padding-bottom: 2.7em;
+    }
+    .products img {
+        width: 100%;
+    }
+}
+
+@media(min-width:992px) {
+    .carousel li {
+        flex-direction: row;
+    }
+    .carousel img {
+        max-width: 30em;
+    }
+}
+
+@media(max-width:1200px) {
     .carousel button {
         display: none;
     }
