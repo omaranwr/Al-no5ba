@@ -171,7 +171,6 @@ main {
 .product-search, .products {
     margin-bottom: 1.5em;
     background-color: white;
-    border: 3px solid rgb(30, 30, 30);
     padding: .5em;
 }
 .product-list label[for="product-search"], #product-search {
@@ -189,7 +188,7 @@ main {
 }
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
+    grid-template-columns: 1fr;
     gap: 1em;
 }
 .products a {
@@ -248,9 +247,9 @@ footer p {
     margin: 0.25rem;
 }
 
-@media(min-width:725px) {
+@media(min-width:600px) {
     .products {    
-        grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     }
     .products li {
         flex-direction: column;
