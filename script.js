@@ -2,19 +2,13 @@ let buttons = document.querySelectorAll("[data-carousel-button]");
 let carousel = document.querySelector(".carousel")
 let carouselImages = document.querySelector(".carousel-images");
 let carouselImagesChildren = carouselImages.children;
-let isInCarousel = false;
 
 var input, filter, ul, li, a, i, txtValue;
 input = document.getElementById('product-search');
 ul = document.getElementById("products");
 li = ul.getElementsByTagName('li');
 
-carousel.addEventListener("mouseover", () => {
-    isInCarousel = true;
-})
-carousel.addEventListener("mouseout", () => {
-    isInCarousel = false;
-})
+
 function changeImage(change) {
     
     let activeSlide = carouselImages.querySelector("[data-active]");
@@ -39,8 +33,8 @@ buttons.forEach( (button) => {
 })
 
 let sliderInterval = window.setInterval( () => {
-    if (!isInCarousel) changeImage(1);
-}, 3000)
+    changeImage(1);
+}, 5000)
 
 
 function productSearch() {

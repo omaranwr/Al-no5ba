@@ -147,15 +147,7 @@ ul {
     opacity: 100%; 
     z-index: 99;
 }
-.carousel:hover img {
-    filter: drop-shadow(10px 10px black);
-}
-.carousel:hover .overlay {
-    opacity: 50%;
-}
-.carousel:hover .img-text {
-    background-color: rgba(30, 30, 30, 80%);
-}
+
 .carousel-images { 
     position: relative;
 }
@@ -191,11 +183,10 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1em;
+    
 }
+
 .products a {
-    display: inline;
-}
-.products li {
     flex-direction: row;
     justify-content: start;
     flex-wrap: nowrap;
@@ -205,11 +196,11 @@ main {
     display: flex;
     position: relative;
 }
-.products li:hover {
+.products a:hover {
     background-color: rgba(30, 30, 30, 17%);
     border-color: transparent;
 }
-.products li:hover p {
+.products a:hover p {
     color: black;
 }
 .products img {
@@ -220,16 +211,19 @@ main {
 .products p {
     margin: 0 .2em 0 0;
     color: rgba(30, 30, 30, 95%);
+}
+.products button, .products p {
+    
     font-size: 5vw;
 }
-.products a {
+.products button {
     display: block;
     border: 3px solid rgb(30, 30, 30);
     position: absolute;
     bottom: .2em;
     padding: .2em;
 }
-.products li:hover a {
+.products a:hover button {
     background-color: rgb(30, 30, 30);
     color: white;
 }
@@ -248,24 +242,35 @@ footer p {
     margin: 0.25rem;
 }
 
-@media(min-width:600px) {
-    .products {    
-        grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+@media (max-width:375px) {
+    .products a button {
+        display: none;
     }
-    .products li {
-        flex-direction: column;
+}
+
+@media(min-width:850px) {
+   .products {    
+        grid-template-columns: 1fr 1fr;
+    }
+    .products p, .products button {
+        font-size: 1.6rem;
+        
     }
     .products p {
-        font-size: 1.6rem;
         padding-bottom: 2.7em;
-    }
-    .products img {
-        width: 100%;
     }
 }
 
 @media(min-width:992px) {
-    
+    .carousel:hover img {
+        filter: drop-shadow(10px 10px black);
+    }
+    .carousel:hover .overlay {
+        opacity: 50%;
+    }
+    .carousel:hover .img-text {
+        background-color: rgba(30, 30, 30, 80%);
+    }
     .carousel li {
         flex-direction: row;
     }
